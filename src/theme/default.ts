@@ -1,51 +1,74 @@
 import { extendTheme } from "@chakra-ui/react";
-import { boxShadow } from "./effects/shadow";
-import colors from "./colors.json";
+import { mode, StyleFunctionProps } from "@chakra-ui/theme-tools";
+import { Dict } from "@chakra-ui/utils";
+import colorsConfig from "./colors.json";
+
+const { colors, semanticTokens } = colorsConfig;
+
+function getColorMode(color: string) {
+  return (props: Dict<any> | StyleFunctionProps) => mode(
+    semanticTokens.colors[color].default, 
+    semanticTokens.colors[color]._dark
+  )(props)
+};
 
 export const theme = extendTheme({
+  initialColorMode: 'dark',
+  useSystemColorMode: false,
+  semanticTokens,
   colors,
   fonts: {
     heading: "'Inter', sans-serif",
     body: "'Inter', sans-serif",
   },
   styles: {
-    global: {
-      ":root": {
-        "--primary": colors.primary[500],
-        "--primary-400": colors.primary[400],
-        "--primary-300": colors.primary[300],
-        "--primary-200": colors.primary[200],
-        "--primary-100": colors.primary[100]
-      },
+    global: (props) => ({
       "*": {
         userSelect: "none",
         transition: "filter .2s linear !important",
+        WebkitTapHighlightColor: "transparent"
       },
       "::-webkit-scrollbar": {
         w: 2,
         mr: -2
       },
       "::-webkit-scrollbar-track": {
-        background: colors.primary[300],
-        ...boxShadow()
+        h: 5,
+        background: getColorMode("background")(props)
       },
       "::-webkit-scrollbar-thumb": {
-        background: colors.primary[400],
+        background: getColorMode("primary.600")(props)
       },
       "::-webkit-scrollbar-thumb:hover": {
-        background: colors.primary[500],
+        background: getColorMode("primary.800")(props)
+      },
+      html: {
+        height: "-webkit-fill-available",
+        overscrollBehaviorY: "contain"
       },
       body: {
-        bg: colors.primary[100],
-        h: "100vh",
+        bg: getColorMode("background")(props),
         w: "100vw",
-        overflow: "hidden"
+        h: "100vh",
+        minHeight: "100vh",
+        minH: "-webkit-fill-available",
+        overscrollBehaviorY: "contain",
+        overflowY: "hidden",
+        overflowX: "hidden",
+        isRandom: true
+      },
+      'div[role="progressbar"]': {
+        bgColor: getColorMode("primary.700")(props),
       },
       "button:hover": {
         filter: "brightness(0.95)"
       },
+      ".js-focus-visible :focus:not([data-focus-visible-added])": { 
+        outline: "none",
+        boxShadow: "none" 
+      },
       ".primary-progressbar > div[role='progressbar']": {
-        bg: colors.primary[500]
+        bg: getColorMode("primary.500")(props)
       },
       "*:focus": {
         boxShadow: "none !important"
@@ -57,6 +80,6 @@ export const theme = extendTheme({
         color: "var(--primary) !important",
         bgColor: "primary.100"
       }
-    }
+    })
   }
 });

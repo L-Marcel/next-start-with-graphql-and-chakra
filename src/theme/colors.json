@@ -1,10 +1,120 @@
 {
-  "primary": {
-    "500": "#423958",
-    "400": "#80749B",
-    "350": "#C1B1E6",
-    "300": "#CABDE9",
-    "200": "#D5CCEB",
-    "100": "#E6E2F0"
+  "semanticTokens": { 
+    "colors": {
+      "background": {
+        "default": "whiteAlpha.900",
+        "_dark": "blackAlpha.900"
+      },
+      "alpha.50": {
+        "default": "blackAlpha.50",
+        "_dark": "whiteAlpha.50"
+      },
+      "alpha.100": {
+        "default": "blackAlpha.100",
+        "_dark": "whiteAlpha.100"
+      },
+      "alpha.200": {
+        "default": "blackAlpha.200",
+        "_dark": "whiteAlpha.200"
+      },
+      "alpha.300": {
+        "default": "blackAlpha.300",
+        "_dark": "whiteAlpha.300"
+      },
+      "alpha.400": {
+        "default": "blackAlpha.400",
+        "_dark": "whiteAlpha.400"
+      },
+      "alpha.500": {
+        "default": "blackAlpha.500",
+        "_dark": "whiteAlpha.500"
+      },
+      "alpha.600": {
+        "default": "blackAlpha.600",
+        "_dark": "whiteAlpha.600"
+      },
+      "alpha.700": {
+        "default": "blackAlpha.700",
+        "_dark": "whiteAlpha.700"
+      },
+      "alpha.800": {
+        "default": "blackAlpha.800",
+        "_dark": "whiteAlpha.800"
+      },
+      "alpha.900": {
+        "default": "blackAlpha.800",
+        "_dark": "whiteAlpha.800"
+      },
+      "alpha.alt.50": {
+        "default": "whiteAlpha.50",
+        "_dark": "blackAlpha.50"
+      },
+      "alpha.alt.100": {
+        "default": "whiteAlpha.100",
+        "_dark": "blackAlpha.100"
+      },
+      "alpha.alt.200": {
+        "default": "whiteAlpha.200",
+        "_dark": "blackAlpha.200"
+      },
+      "alpha.alt.300": {
+        "default": "whiteAlpha.300",
+        "_dark": "blackAlpha.300"
+      },
+      "alpha.alt.400": {
+        "default": "whiteAlpha.400",
+        "_dark": "blackAlpha.400"
+      },
+      "alpha.alt.500": {
+        "default": "whiteAlpha.500",
+        "_dark": "blackAlpha.500"
+      },
+      "alpha.alt.600": {
+        "default": "whiteAlpha.600",
+        "_dark": "blackAlpha.600"
+      },
+      "alpha.alt.700": {
+        "default": "whiteAlpha.700",
+        "_dark": "blackAlpha.700"
+      },
+      "alpha.alt.800": {
+        "default": "whiteAlpha.800",
+        "_dark": "blackAlpha.800"
+      },
+      "alpha.alt.900": {
+        "default": "whiteAlpha.800",
+        "_dark": "blackAlpha.800"
+      },
+      "primary.100": {
+        "default": "#E6E2F0",
+        "_dark": "#E6E2F0"
+      },
+      "primary.200": {
+        "default": "#D5CCEB",
+        "_dark": "#D5CCEB"
+      },
+      "primary.300": {
+        "default": "#CABDE9",
+        "_dark": "#CABDE9"
+      },
+      "primary.400": {
+        "default": "#80749B",
+        "_dark": "#80749B"
+      },
+      "primary.500": {
+        "default": "#423958",
+        "_dark": "#423958"
+      }
+    }
+  },
+  "colors": {
+    "contant": {
+      "500": "#423958",
+      "400": "#80749B",
+      "350": "#C1B1E6",
+      "300": "#CABDE9",
+      "200": "#D5CCEB",
+      "100": "#E6E2F0"
+    }
   }
 }

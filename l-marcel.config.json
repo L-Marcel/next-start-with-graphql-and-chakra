@@ -1,12 +1,13 @@
 {
-  "name": "Template: Next Start With Chakra",
-  "translatedDescription": "O template criado e usado por mim para iniciar meus projetos. Este modelo tem toda a configuração da interface do usuário do Chakra, a configuração do meu portfólio, Typescript e estrutura de pastas comuns.",
+  "name": "Template: Next-Graphql-And-Chakra",
+  "translatedDescription": "O template criado e usado por mim para iniciar meus projetos. Este modelo tem toda a configuração da interface do usuário do Chakra, a configuração do meu portfólio, Typescript, GraphQL e estrutura de pastas comuns.",
   "technologies": [
     "Next.js",
+    "GraphQL",
     "React.js",
-    "HTML",
-    "CSS",
-    "SASS",
-    "Jest"
+    "Framer Motion",
+    "Prisma",
+    "Apollo",
+    "CSS"
   ]
 }

@@ -1,12 +1,12 @@
 {
   "compilerOptions": {
-    "types": ["node", "jest", "@testing-library/jest-dom"],
     "target": "es5",
     "lib": [
       "dom",
       "dom.iterable",
       "esnext"
     ],
+    "module": "commonjs",
     "allowJs": true,
     "skipLibCheck": true,
     "strict": false,
@@ -14,9 +14,10 @@
     "noEmit": true,
     "incremental": true,
     "esModuleInterop": true,
-    "module": "esnext",
     "moduleResolution": "node",
     "resolveJsonModule": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
     "isolatedModules": true,
     "jsx": "preserve"
   },

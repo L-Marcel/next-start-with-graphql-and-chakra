@@ -1,12 +1,33 @@
-//import Head from "next/head";
+import { GetStaticProps } from "next";
+import { User } from "../../prisma/generated/type-graphql";
+import { getServerPageUsers } from "../graphql/generated/pages";
+import { withApollo } from "../lib/withApollo";
 
-function Home() {
+interface HomeProps {
+  users: User[];
+};
+
+function Home({ users }: HomeProps) {
   return (
     <>
-      {/*<Head>Hello world</Head>*/}
-      <h1>Hello World</h1>
+      {users?.map(u => {
+        return (
+          <h1>{u.id}</h1>
+        );
+      })}
     </>
   );
 };
 
-export default Home;
+export const getStaticProps: GetStaticProps = async ({}) => {
+  const { props: { data } } = await getServerPageUsers({}, {} as any);
+
+  return {
+    props: {
+      users: data.users
+    },
+    revalidate: 60 * 60, // 1 hour
+  };
+};
+
+export default withApollo<HomeProps>(Home);

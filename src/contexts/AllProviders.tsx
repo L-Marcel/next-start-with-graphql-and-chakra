@@ -1,4 +1,5 @@
 import { ChakraProvider } from "@chakra-ui/react";
+import { LazyMotion, MotionConfig } from "framer-motion";
 
 const composeProviders = (...providers) => props => {
   return providers.reduceRight(
@@ -12,5 +13,7 @@ const composeProviders = (...providers) => props => {
 };
 
 export const AllProviders = composeProviders(
-  ChakraProvider
+  ChakraProvider,
+  LazyMotion,
+  MotionConfig
 );
